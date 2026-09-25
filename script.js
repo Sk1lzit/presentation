@@ -1,4 +1,3 @@
-// Плавная анимация появления карточек по очереди
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.role-card');
     cards.forEach((card, i) => {

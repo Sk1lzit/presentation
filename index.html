@@ -3,145 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Персонал сервера — Структура</title>
+    <title>Структура сервера</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- HERO -->
     <header class="hero">
         <div class="hero-content">
-            <h1>Структура <span class="accent">Персонала</span></h1>
-            <p>Иерархия команды сервера — от администрации до персонала</p>
+            <h1>Структура <span class="accent">Сервера</span></h1>
+            <p>Нажми на карточку, чтобы открыть профиль в Discord</p>
             <a href="#schema" class="btn-scroll">Показать схему ↓</a>
         </div>
     </header>
 
-    <!-- СХЕМА -->
     <section class="schema" id="schema">
 
-        <!-- УРОВЕНЬ 1 -->
-        <div class="level level-1">
-            <div class="role-card">
-                <div class="role-icon">👑</div>
-                <div class="role-name">Админ</div>
-                <div class="role-desc">Владелец сервера</div>
+        <!-- ВЕРХ: ЛЕВАЯ ЧАСТЬ (Тех.Админ) + ПРАВАЯ ЧАСТЬ (вся вертикаль) -->
+        <div class="top-wrapper">
+
+            <!-- ЛЕВАЯ ЧАСТЬ: ТЕХ.АДМИН -->
+            <div class="left-side">
+                <a class="role-card clickable" href="https://discord.com/users/646755135703351362" target="_blank">
+                    <div class="role-icon">⚙️</div>
+                    <div class="role-name">Тех. Админ</div>
+                    <div class="role-desc">Техническая часть</div>
+                </a>
             </div>
-        </div>
+
+            <!-- ПРАВАЯ ЧАСТЬ: ВСЯ ИЕРАРХИЯ -->
+            <div class="right-side">
+
+                <!-- УРОВЕНЬ 1: СОЗДАТЕЛЬ + ГЛАВА -->
+                <div class="level level-1">
+                    <a class="role-card clickable" href="https://discord.com/users/426765059730178070" target="_blank">
+                        <div class="role-icon">👑</div>
+                        <div class="role-name">Создатель</div>
+                        <div class="role-desc">Основатель сервера</div>
+                    </a>
+                    <a class="role-card clickable" href="https://discord.com/users/976163496758747167" target="_blank">
+                        <div class="role-icon">👑</div>
+                        <div class="role-name">Глава</div>
+                        <div class="role-desc">Владелец сервера</div>
+                    </a>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <!-- УРОВЕНЬ 2: АДМИН -->
+                <div class="level level-2">
+                    <a class="role-card clickable" href="https://discord.com/users/582627201070006331" target="_blank">
+                        <div class="role-icon">🛡️</div>
+                        <div class="role-name">Админ</div>
+                        <div class="role-desc">Управляет сервером</div>
+                    </a>
+                </div>
+
+                <div class="arrow">↓</div>
 
         <div class="arrow">↓</div>
 
-        <!-- УРОВЕНЬ 2 -->
-        <div class="level level-2">
-            <div class="role-card">
-                <div class="role-icon">👔</div>
-                <div class="role-name">Глава Персонала</div>
-                <div class="role-desc">Управляет составом</div>
-            </div>
-            <div class="role-card">
-                <div class="role-icon">🛡️</div>
-                <div class="role-name">Глава Модераторов</div>
-                <div class="role-desc">Управляет модерацией</div>
-            </div>
-        </div>
-
-        <div class="arrow">↓</div>
-
-        <!-- УРОВЕНЬ 3 -->
+        <!-- УРОВЕНЬ 3: ДВА ОТДЕЛА -->
         <div class="level level-3">
-            <div class="group">
-                <div class="group-title">Отдел Персонала</div>
-                <div class="group-items">
-                    <div class="role-card small">
-                        <div class="role-icon">👥</div>
-                        <div class="role-name">Куратор</div>
+            <!-- ПЕРСОНАЛ -->
+            <div class="branch">
+                <div class="branch-title">Персонал</div>
+                <a class="role-card medium clickable" href="https://discord.com/users/670944110630273024" target="_blank">
+                    <div class="role-icon">👔</div>
+                    <div class="role-name">Глава Персонала</div>
+                </a>
+                <div class="sub-arrow">↓</div>
+                <div class="row-2">
+                    <!-- КУРАТОР 1 -->
+                    <div class="sub-branch">
+                        <a class="role-card small clickable" href="https://discord.com/users/426765059730178070" target="_blank">
+                            <div class="role-icon">👥</div>
+                            <div class="role-name">Куратор</div>
+                            <div class="role-desc">Третья группа</div>
+                        </a>
+                        <div class="sub-arrow-small">↓</div>
+                        <a class="role-card tiny clickable" href="https://discord.com/users/1529890286560350319" target="_blank">
+                            <div class="role-icon">🎯</div>
+                            <div class="role-name">Зам</div>
+                        </a>
                     </div>
-                    <div class="role-card small">
-                        <div class="role-icon">👥</div>
-                        <div class="role-name">Куратор</div>
+                    <!-- КУРАТОР 2 -->
+                    <div class="sub-branch">
+                        <a class="role-card small clickable" href="https://discord.com/users/1132913267707228200" target="_blank">
+                            <div class="role-icon">👥</div>
+                            <div class="role-name">Куратор</div>
+                            <div class="role-desc">Первая группа</div>
+                        </a>
+                        <div class="sub-arrow-small">↓</div>
+                        <a class="role-card tiny clickable" href="https://discord.com/users/582627201070006331" target="_blank">
+                            <div class="role-icon">🎯</div>
+                            <div class="role-name">Зам</div>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="group">
-                <div class="group-title">Отдел Модерации</div>
-                <div class="group-items">
-                    <div class="role-card small">
+
+            <!-- МОДЕРАЦИЯ -->
+            <div class="branch">
+                <div class="branch-title">Модерация</div>
+                <a class="role-card medium clickable" href="https://discord.com/users/690814267129069648" target="_blank">
+                    <div class="role-icon">🛡️</div>
+                    <div class="role-name">Глава Модераторов</div>
+                </a>
+                <div class="sub-arrow">↓</div>
+                <div class="row-3">
+                    <a class="role-card small clickable" href="https://discord.com/users/1529890286560350319" target="_blank">
                         <div class="role-icon">🛡️</div>
                         <div class="role-name">Модератор</div>
-                    </div>
-                    <div class="role-card small">
+                    </a>
+                    <a class="role-card small clickable" href="https://discord.com/users/336204569119817728" target="_blank">
                         <div class="role-icon">🛡️</div>
                         <div class="role-name">Модератор</div>
-                    </div>
+                    </a>
+                    <a class="role-card small clickable" href="https://discord.com/users/1326625882537852990" target="_blank">
+                        <div class="role-icon">🛡️</div>
+                        <div class="role-name">Модератор</div>
+                    </a>
                 </div>
             </div>
         </div>
+    </div>
+            <!-- Закрытие right-side -->
 
-        <div class="arrow">↓</div>
-
-        <!-- УРОВЕНЬ 4 -->
-        <div class="level level-4">
-            <div class="role-card small">
-                <div class="role-icon">🎯</div>
-                <div class="role-name">Зам</div>
-            </div>
-            <div class="role-card small">
-                <div class="role-icon">🎯</div>
-                <div class="role-name">Зам</div>
-            </div>
-            <div class="role-card small">
-                <div class="role-icon">🎯</div>
-                <div class="role-name">Зам</div>
-            </div>
-        </div>
-
-        <div class="arrow">↓</div>
-
-        <!-- УРОВЕНЬ 5 -->
-        <div class="level level-5">
-            <div class="role-card small">
-                <div class="role-icon">👤</div>
-                <div class="role-name">Персонал</div>
-            </div>
-            <div class="role-card small">
-                <div class="role-icon">👤</div>
-                <div class="role-name">Персонал</div>
-            </div>
-            <div class="role-card small">
-                <div class="role-icon">👤</div>
-                <div class="role-name">Персонал</div>
-            </div>
-            <div class="role-card small">
-                <div class="role-icon">👤</div>
-                <div class="role-name">Персонал</div>
-            </div>
-        </div>
-
+</div>
+        <!-- Закрытие top-wrapper -->
     </section>
 
-    <!-- ЛЕГЕНДА -->
     <section class="legend">
         <h2>Уровни доступа</h2>
         <div class="legend-grid">
-            <div class="legend-item">
-                <div class="dot" style="background: #fbbf24;"></div>
-                <span><b>Администрация</b> — полный доступ</span>
-            </div>
-            <div class="legend-item">
-                <div class="dot" style="background: #ef4444;"></div>
-                <span><b>Главы отделов</b> — управление</span>
-            </div>
-            <div class="legend-item">
-                <div class="dot" style="background: #8b5cf6;"></div>
-                <span><b>Кураторы/Модераторы</b> — контроль</span>
-            </div>
-            <div class="legend-item">
-                <div class="dot" style="background: #3b82f6;"></div>
-                <span><b>Замы</b> — помощь</span>
-            </div>
-            <div class="legend-item">
-                <div class="dot" style="background: #10b981;"></div>
-                <span><b>Персонал</b> — базовые задачи</span>
-            </div>
+            <div class="legend-item"><div class="dot" style="background: #fbbf24;"></div><span><b>Создатель / Глава</b> — полный доступ</span></div>
+            <div class="legend-item"><div class="dot" style="background: #f97316;"></div><span><b>Тех. Админ</b> — техническая часть</span></div>
+            <div class="legend-item"><div class="dot" style="background: #ef4444;"></div><span><b>Админ</b> — управление</span></div>
+            <div class="legend-item"><div class="dot" style="background: #8b5cf6;"></div><span><b>Главы отделов</b> — руководство</span></div>
+            <div class="legend-item"><div class="dot" style="background: #3b82f6;"></div><span><b>Кураторы</b> — контроль</span></div>
+            <div class="legend-item"><div class="dot" style="background: #10b981;"></div><span><b>Модераторы</b> — порядок</span></div>
+            <div class="legend-item"><div class="dot" style="background: #6b7280;"></div><span><b>Замы</b> — помощь кураторам</span></div>
         </div>
     </section>
 
