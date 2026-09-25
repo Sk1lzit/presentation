@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персонал сервера — Структура</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Структура <span class="accent">Персонала</span></h1>
+            <p>Иерархия команды сервера — от администрации до персонала</p>
+            <a href="#schema" class="btn-scroll">Показать схему ↓</a>
+        </div>
+    </header>
+
+    <!-- СХЕМА -->
+    <section class="schema" id="schema">
+
+        <!-- УРОВЕНЬ 1 -->
+        <div class="level level-1">
+            <div class="role-card">
+                <div class="role-icon">👑</div>
+                <div class="role-name">Админ</div>
+                <div class="role-desc">Владелец сервера</div>
+            </div>
+        </div>
+
+        <div class="arrow">↓</div>
+
+        <!-- УРОВЕНЬ 2 -->
+        <div class="level level-2">
+            <div class="role-card">
+                <div class="role-icon">👔</div>
+                <div class="role-name">Глава Персонала</div>
+                <div class="role-desc">Управляет составом</div>
+            </div>
+            <div class="role-card">
+                <div class="role-icon">🛡️</div>
+                <div class="role-name">Глава Модераторов</div>
+                <div class="role-desc">Управляет модерацией</div>
+            </div>
+        </div>
+
+        <div class="arrow">↓</div>
+
+        <!-- УРОВЕНЬ 3 -->
+        <div class="level level-3">
+            <div class="group">
+                <div class="group-title">Отдел Персонала</div>
+                <div class="group-items">
+                    <div class="role-card small">
+                        <div class="role-icon">👥</div>
+                        <div class="role-name">Куратор</div>
+                    </div>
+                    <div class="role-card small">
+                        <div class="role-icon">👥</div>
+                        <div class="role-name">Куратор</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="group-title">Отдел Модерации</div>
+                <div class="group-items">
+                    <div class="role-card small">
+                        <div class="role-icon">🛡️</div>
+                        <div class="role-name">Модератор</div>
+                    </div>
+                    <div class="role-card small">
+                        <div class="role-icon">🛡️</div>
+                        <div class="role-name">Модератор</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow">↓</div>
+
+        <!-- УРОВЕНЬ 4 -->
+        <div class="level level-4">
+            <div class="role-card small">
+                <div class="role-icon">🎯</div>
+                <div class="role-name">Зам</div>
+            </div>
+            <div class="role-card small">
+                <div class="role-icon">🎯</div>
+                <div class="role-name">Зам</div>
+            </div>
+            <div class="role-card small">
+                <div class="role-icon">🎯</div>
+                <div class="role-name">Зам</div>
+            </div>
+        </div>
+
+        <div class="arrow">↓</div>
+
+        <!-- УРОВЕНЬ 5 -->
+        <div class="level level-5">
+            <div class="role-card small">
+                <div class="role-icon">👤</div>
+                <div class="role-name">Персонал</div>
+            </div>
+            <div class="role-card small">
+                <div class="role-icon">👤</div>
+                <div class="role-name">Персонал</div>
+            </div>
+            <div class="role-card small">
+                <div class="role-icon">👤</div>
+                <div class="role-name">Персонал</div>
+            </div>
+            <div class="role-card small">
+                <div class="role-icon">👤</div>
+                <div class="role-name">Персонал</div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ЛЕГЕНДА -->
+    <section class="legend">
+        <h2>Уровни доступа</h2>
+        <div class="legend-grid">
+            <div class="legend-item">
+                <div class="dot" style="background: #fbbf24;"></div>
+                <span><b>Администрация</b> — полный доступ</span>
+            </div>
+            <div class="legend-item">
+                <div class="dot" style="background: #ef4444;"></div>
+                <span><b>Главы отделов</b> — управление</span>
+            </div>
+            <div class="legend-item">
+                <div class="dot" style="background: #8b5cf6;"></div>
+                <span><b>Кураторы/Модераторы</b> — контроль</span>
+            </div>
+            <div class="legend-item">
+                <div class="dot" style="background: #3b82f6;"></div>
+                <span><b>Замы</b> — помощь</span>
+            </div>
+            <div class="legend-item">
+                <div class="dot" style="background: #10b981;"></div>
+                <span><b>Персонал</b> — базовые задачи</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

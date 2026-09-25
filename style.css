@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #0a0118;
+    --bg-card: #150828;
+    --purple: #8b5cf6;
+    --purple-light: #a78bfa;
+    --text: #ffffff;
+    --text-muted: #a1a1aa;
+    --border: rgba(139, 92, 246, 0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+    background-attachment: fixed;
+}
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    animation: fadeInDown 0.8s ease;
+}
+
+.accent {
+    background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    animation: fadeIn 1s ease;
+}
+
+.btn-scroll {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--purple), #6d28d9);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+    animation: fadeInUp 1.2s ease;
+}
+
+.btn-scroll:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 50px rgba(139, 92, 246, 0.6);
+}
+
+/* ===== СХЕМА ===== */
+.schema {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.level {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.arrow {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--purple);
+    margin: 1.5rem 0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(8px); }
+}
+
+/* ===== КАРТОЧКИ ===== */
+.role-card {
+    background: linear-gradient(135deg, #150828 0%, #1e0d3d 100%);
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    padding: 1.8rem 2rem;
+    min-width: 220px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.role-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    border-color: var(--purple);
+    box-shadow: 0 12px 45px rgba(139, 92, 246, 0.45);
+}
+
+.role-card.small {
+    padding: 1.2rem 1.5rem;
+    min-width: 150px;
+}
+
+.role-icon {
+    font-size: 2.8rem;
+    margin-bottom: 0.7rem;
+}
+
+.role-card.small .role-icon {
+    font-size: 2rem;
+}
+
+.role-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--purple-light);
+    margin-bottom: 0.3rem;
+}
+
+.role-card.small .role-name {
+    font-size: 0.95rem;
+}
+
+.role-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* ===== ЦВЕТА УРОВНЕЙ ===== */
+.level-1 .role-card {
+    border-color: #fbbf24;
+    background: linear-gradient(135deg, #1a0f00 0%, #2a1800 100%);
+    box-shadow: 0 4px 35px rgba(251, 191, 36, 0.3);
+}
+.level-1 .role-name { color: #fbbf24; }
+
+.level-2 .role-card {
+    border-color: #ef4444;
+    background: linear-gradient(135deg, #1a0000 0%, #2a0808 100%);
+}
+.level-2 .role-name { color: #f87171; }
+
+.level-3 .role-card {
+    border-color: #8b5cf6;
+}
+.level-3 .role-name { color: #a78bfa; }
+
+.level-4 .role-card {
+    border-color: #3b82f6;
+    background: linear-gradient(135deg, #001428 0%, #0a1e3d 100%);
+}
+.level-4 .role-name { color: #60a5fa; }
+
+.level-5 .role-card {
+    border-color: #10b981;
+    background: linear-gradient(135deg, #001a10 0%, #0a2a1e 100%);
+}
+.level-5 .role-name { color: #34d399; }
+
+/* ===== ГРУППЫ ===== */
+.group {
+    background: rgba(139, 92, 246, 0.05);
+    border: 1px dashed var(--border);
+    border-radius: 16px;
+    padding: 1.2rem;
+    min-width: 260px;
+}
+
+.group-title {
+    text-align: center;
+    color: var(--purple-light);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+.group-items {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ===== ЛЕГЕНДА ===== */
+.legend {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem;
+}
+
+.legend h2 {
+    color: var(--purple-light);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.legend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.legend-item b {
+    color: var(--text);
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* ===== АНИМАЦИИ ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1rem; }
+    .level { gap: 1rem; }
+    .role-card { min-width: 160px; padding: 1.2rem; }
+    .role-card.small { min-width: 130px; padding: 0.9rem; }
+    .role-icon { font-size: 2rem; }
+    .role-card.small .role-icon { font-size: 1.5rem; }
+    .group { min-width: auto; width: 100%; }
+    .legend { padding: 1.5rem; }
+    .legend h2 { font-size: 1.3rem; }
+}
